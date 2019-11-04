@@ -8,18 +8,6 @@ public class Logo {
     private Circle c;
     private Text t;
 
-    public static class Lib{
-
-        Rectangle rect = new Rectangle();
-        Circle circle = new Circle();
-
-        Logo[] array= new Logo[2];
-
-
-
-
-
-    }
 
     private double area;
 
