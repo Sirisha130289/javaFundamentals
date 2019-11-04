@@ -6,7 +6,8 @@ public class Logo {
 
     private Rectangle[] r;
     private Circle[] c;
-    private Text t;
+
+    private String text;
     private double area;
 
     public Rectangle[] getR() {
@@ -26,31 +27,30 @@ public class Logo {
     }
 
 
-
-    Logo(Rectangle[] rectArray, Circle[] circArray, Text t) {
+    Logo(Rectangle[] rectArray, Circle[] circArray, String text) {
         this.r = rectArray;
         this.c = circArray;
-        this.t=t;
+        this.text = text;
     }
 
     public double getArea() {
         double totalArea = 0;
 
-        for(int i = 0 ; i < r.length; i++){
-            System.out.println("Rectangle on index " + i + " his area is " +r[i].getArea());
+        for (int i = 0; i < r.length; i++) {
+            System.out.println("Rectangle on index " + i + " his area is " + r[i].getArea());
         }
-        for(int i = 0 ; i < c.length; i++){
-            System.out.println("Circle on index " + i + " his area is " +c[i].getArea());
+        for (int i = 0; i < c.length; i++) {
+            System.out.println("Circle on index " + i + " his area is " + c[i].getArea());
         }
 
-        for (Rectangle rect: r
-             ) {
+        for (Rectangle rect : r
+        ) {
             totalArea += rect.getArea();
 
         }
 
-        for (Circle circ: c
-             ) {
+        for (Circle circ : c
+        ) {
             totalArea += circ.getArea();
 
         }
@@ -58,14 +58,11 @@ public class Logo {
 
     }
 
-
-    public void setT(Text t) {
-        this.t = t;
-    }
-    public Text getT() {
-        return t;
+    public String getText() {
+        return text;
     }
 
+    public void setText(String text) {
+        this.text = text;
+    }
 }
-
-
