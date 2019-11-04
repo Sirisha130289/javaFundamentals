@@ -4,35 +4,58 @@ import org.w3c.dom.css.Rect;
 
 public class Logo {
 
-    private Rectangle r;
-    private Circle c;
+    private Rectangle[] r;
+    private Circle[] c;
     private Text t;
-
-
     private double area;
 
-    Logo(Rectangle r, Circle c, Text t) {
+    public Rectangle[] getR() {
+        return r;
+    }
+
+    public void setR(Rectangle[] r) {
         this.r = r;
+    }
+
+    public Circle[] getC() {
+        return c;
+    }
+
+    public void setC(Circle[] c) {
         this.c = c;
+    }
+
+
+
+    Logo(Rectangle[] rectArray, Circle[] circArray, Text t) {
+        this.r = rectArray;
+        this.c = circArray;
         this.t=t;
     }
 
     public double getArea() {
-   return r.getArea()+c.getArea();
+        double totalArea = 0;
 
-    }
-    public void setR(Rectangle r) {
-        this.r = r;
-    }
-    public void getR() {
-        this.r = r;
-    }
-    public void setC(Circle c) {
-        this.c = c;
-    }
+        for(int i = 0 ; i < r.length; i++){
+            System.out.println("Rectangle on index " + i + " his area is " +r[i].getArea());
+        }
+        for(int i = 0 ; i < c.length; i++){
+            System.out.println("Circle on index " + i + " his area is " +c[i].getArea());
+        }
 
-    public void getC() {
-        this.c = c;
+        for (Rectangle rect: r
+             ) {
+            totalArea += rect.getArea();
+
+        }
+
+        for (Circle circ: c
+             ) {
+            totalArea += circ.getArea();
+
+        }
+        return totalArea;
+
     }
 
 
