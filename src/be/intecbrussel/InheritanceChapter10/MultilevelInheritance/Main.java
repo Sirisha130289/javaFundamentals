@@ -1,4 +1,4 @@
-package be.intecbrussel.Inheritance.MultilevelInheritance;
+package be.intecbrussel.InheritanceChapter10.MultilevelInheritance;
 
 public class Main {
     public static void main(String[] args) {
