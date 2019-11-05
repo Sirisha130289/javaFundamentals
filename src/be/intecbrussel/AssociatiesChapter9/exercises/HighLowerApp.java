@@ -3,7 +3,7 @@ package be.intecbrussel.AssociatiesChapter9.exercises;
 import java.util.Scanner;
 
 public class HighLowerApp {
-    public static void main(Text[] args) {
+    public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Please enter a number");
         int guessvalue = keyboard.nextInt();

@@ -15,8 +15,8 @@ public class MainLogoApp {
         Rectangle[] rectangleArray = {myRect1, myRect2, myRect3};
         Circle[] circleArray = {myCirc1, myCirc2, myCirc3};
 
-        Text t = new Text();
-        Logo l = new Logo(rectangleArray, circleArray, t);
+        String text = "Pepsi";
+        Logo l = new Logo(rectangleArray, circleArray, text);
 
         System.out.println(l.getArea()) ;
 
