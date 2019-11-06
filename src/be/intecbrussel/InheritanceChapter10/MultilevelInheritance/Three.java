@@ -1,4 +1,4 @@
-package be.intecbrussel.Inheritance.MultilevelInheritance;
+package be.intecbrussel.InheritanceChapter10.MultilevelInheritance;
 
 public class Three extends Two {
     public void print_geek(){

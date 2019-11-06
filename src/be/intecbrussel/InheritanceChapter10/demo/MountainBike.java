@@ -1,4 +1,4 @@
-package be.intecbrussel.Inheritance;
+package be.intecbrussel.InheritanceChapter10.demo;
 
 public class MountainBike extends Bicycle {
     //the MountainBike subclass adds one more field

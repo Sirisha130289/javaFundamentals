@@ -1,4 +1,4 @@
-package be.intecbrussel.Inheritance.SingleInheritance;
+package be.intecbrussel.InheritanceChapter10.SingleInheritance;
 
 public class Main {
     public static void main(String[] args) {

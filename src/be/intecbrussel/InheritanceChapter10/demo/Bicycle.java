@@ -1,4 +1,4 @@
-package be.intecbrussel.Inheritance;
+package be.intecbrussel.InheritanceChapter10.demo;
 
 public class Bicycle {
 
