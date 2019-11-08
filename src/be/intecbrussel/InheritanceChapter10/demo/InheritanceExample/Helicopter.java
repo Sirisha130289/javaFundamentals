@@ -6,7 +6,7 @@ public class Helicopter extends Vehicle {
 
     @Override
     public void accelerateForward() {
-        super.accelerateForward();
+        accelerateForward();
         System.out.println("Helicopter starts moving forward");
     }
     @Override

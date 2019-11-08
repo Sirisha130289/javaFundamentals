@@ -4,13 +4,16 @@ public class Dog {
     String name;
 
 
-    public static void bark () {
-            System.out.println("Dog is barking");
+
+
+
+    public  void bark () {
+            System.out.println(this.name+" is barking");
         }
-        public static void chaseCat () {
+        public  void chaseCat () {
             System.out.println("Chase the cat");
         }
-        public static void eat () {
+        public  void eat () {
             System.out.println("Eat meat");
         }
 

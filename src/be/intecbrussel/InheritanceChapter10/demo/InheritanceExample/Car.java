@@ -1,4 +1,4 @@
 package be.intecbrussel.InheritanceChapter10.demo.InheritanceExample;
 
-public class Car extends Vehicle {
+public abstract class Car extends Vehicle {
 }

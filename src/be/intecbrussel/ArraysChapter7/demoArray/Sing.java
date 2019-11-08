@@ -21,6 +21,6 @@ public class Sing {
     }
 
     public void play(){
-
+        System.out.println(this.title+" is being sung by " + this.artist);
     }
 }

@@ -14,7 +14,7 @@ public class MainInheritance {
         };
         vehicle.accelerateForward();
 
-        Car car = new Car();
-        car.accelerateForward();
+//        Car car = new Car();
+//        car.accelerateForward();
     }
 }
