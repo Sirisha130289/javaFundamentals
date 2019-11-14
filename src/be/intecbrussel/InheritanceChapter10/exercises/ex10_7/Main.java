@@ -5,12 +5,13 @@ package be.intecbrussel.InheritanceChapter10.exercises.ex10_7;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Total no of Shapes:");
+        System.out.println("Total no of Shapes: "+Rectangle.getRectangleCount()+Square.getSquareCount()+Circle.getCircleCount()+ Triangle.getTriangleCount()+ IsoScelesTriangle.getIsoTriangleCount() );
 //        System.out.println("Rectangles - " +Rectangle.getRectangleCount());
 //        System.out.println("Squares - " + Square.getSquareCount());
 //        System.out.println("Circles - " +Circle.getCircleCount());
 //        System.out.println("Triangles - "+ Triangle.getTriangleCount());
 //        System.out.println("IsoScelesTriangles - "+ IsoScelesTriangle.getIsoTriangleCount());
+
         Rectangle rect1 = new Rectangle();
 
         Rectangle rect2 = new Rectangle(4, 5);
