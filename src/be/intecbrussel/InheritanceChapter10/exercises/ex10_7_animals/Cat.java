@@ -1,4 +1,4 @@
-package be.intecbrussel.InheritanceChapter10.exercises.ex10_8;
+package be.intecbrussel.InheritanceChapter10.exercises.ex10_7_animals;
 
 public class Cat extends Animal{
 
@@ -6,7 +6,7 @@ public class Cat extends Animal{
 
     }
     Cat (String name){
-        super.setName("Cat");
+        super.setName("Tom");
     }
     @Override
     public String move() {

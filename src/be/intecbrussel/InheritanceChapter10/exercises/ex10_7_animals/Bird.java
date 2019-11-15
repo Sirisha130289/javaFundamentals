@@ -1,4 +1,4 @@
-package be.intecbrussel.InheritanceChapter10.exercises.ex10_8;
+package be.intecbrussel.InheritanceChapter10.exercises.ex10_7_animals;
 
 public class Bird extends Animal {
     Bird() {
@@ -6,7 +6,7 @@ public class Bird extends Animal {
     }
 
     Bird(String name) {
-        super.setName("Bird");
+        super.setName("Rio");
     }
 
 
