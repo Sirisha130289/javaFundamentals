@@ -47,27 +47,29 @@ public class CircusMalpertus {
         System.out.println("Enter the age of the Customer");
         int age = keyboard.nextInt();
 
-        int priceToBePaid = 0;
+        double priceToBePaid = 0;
 
-        if (age < 12 && (isSpecialDay(3) || isWeekdays(6)) && show == 1) {
-            priceToBePaid = (basicPricePerShow - basicPricePerShow * (15 / 100)) / 2;
-        } else if (age < 12 && !(isSpecialDay(3) || isWeekdays(6)) && show == 2) {
-            priceToBePaid = (basicPricePerShow) / 2;
+        if (age < 12 && isSpecialDay(3) && show == 1) {
+            priceToBePaid = (basicPricePerShow - basicPricePerShow * (15d / 100)) / 2;
+        } else if (age < 12 && isSpecialDay(3) && show == 2) {
+            priceToBePaid = 0;
+        } else if (age < 12 && isWeekdays(6) && (show == 1 || show == 2)) {
+            priceToBePaid = basicPricePerShow / 2;
+        } else if (age < 12 && !(isWeekdays(6) || isSpecialDay(3)) && (show == 1 || show == 2)) {
+            priceToBePaid = 0;
         }
-
-        if ((age > 12 && age < 65) && isSpecialDay(3)&& show == 1) {
-            priceToBePaid = (basicPricePerShow - basicPricePerShow * (15 / 100));
-        } else if((age > 12 && age < 65) &&!isSpecialDay(3)&& show == 2) {
+        if ((age > 12 && age < 65) && show == 1) {
+            priceToBePaid = (basicPricePerShow - basicPricePerShow * (15d / 100));
+        } else if ((age > 12 && age < 65) && show == 2) {
             priceToBePaid = basicPricePerShow;
         }
 
+
         if (age > 65 && show == 1) {
-            priceToBePaid = ((basicPricePerShow - basicPricePerShow * (15 / 100)) * 30 / 100);
-        } else if(age > 65 && show == 2){
-            priceToBePaid = basicPricePerShow - (basicPricePerShow * (30 / 100));
+            priceToBePaid = (basicPricePerShow - basicPricePerShow * (15d / 100) - ((basicPricePerShow - basicPricePerShow * (15d / 100)) * (30d / 100)));
+        } else if (age > 65 && show == 2) {
+            priceToBePaid = basicPricePerShow - (basicPricePerShow * (30d / 100));
         }
         System.out.println("The price to be paid in euors is: " + priceToBePaid);
     }
-
 }
-
