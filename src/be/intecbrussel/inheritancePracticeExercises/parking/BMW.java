@@ -12,6 +12,6 @@ BMW(){
 
     @Override
     public void fuelUp() {
-        System.out.println("This car runs on gasoline");
+        System.out.println("This BMW car runs on gasoline");
     }
 }

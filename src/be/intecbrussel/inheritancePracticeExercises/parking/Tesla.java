@@ -1,6 +1,13 @@
 package be.intecbrussel.inheritancePracticeExercises.parking;
 
 public  class Tesla extends Cars {
+
+
+
+
+
+
+
     @Override
     public String toString() {
         return "Tesla{" +
@@ -11,7 +18,7 @@ public  class Tesla extends Cars {
 
     @Override
     public void fuelUp() {
-        System.out.println("This car runs on petrol");
+        System.out.println("This Tesla car runs on petrol");
 
     }
 
