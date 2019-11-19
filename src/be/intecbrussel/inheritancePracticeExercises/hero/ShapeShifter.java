@@ -11,10 +11,12 @@ public class ShapeShifter extends Hero{
     }
     ShapeShifter(String name, int age){
         this.alias = name;
-        this.age = age;
+        super.setAge(age);
     }
-
+@Override
     public void useSuperPower(){
+        super.useSuperPower();
+        System.out.println("Jet Away!");
 
     }
 
@@ -22,7 +24,7 @@ public class ShapeShifter extends Hero{
     public String toString() {
         return "ShapeShifter{" +
                 "alias='" + alias + '\'' +
-                ", age=" + age +
+                ", age=" + super.getAge() +
                 '}';
     }
 }

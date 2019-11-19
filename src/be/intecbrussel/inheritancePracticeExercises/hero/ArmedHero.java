@@ -1,11 +1,11 @@
 package be.intecbrussel.inheritancePracticeExercises.hero;
 
 public class ArmedHero extends Hero{
+
+
     ArmedHero(){
 
     }
-
-
 
     ArmedHero(String name){
         this.alias = name;
@@ -13,10 +13,12 @@ public class ArmedHero extends Hero{
 
     ArmedHero(String name, int age){
         this.alias = name;
-        this.age = age;
+        super.setAge(age);
     }
 
+
     public void useSuperPower(){
+        System.out.println("Make Marvel Great again.");
 
     }
 
@@ -24,7 +26,7 @@ public class ArmedHero extends Hero{
     public String toString() {
         return "ArmedHero{" +
                 "alias='" + alias + '\'' +
-                ", age=" + age +
+                ", age=" + super.getAge() +
                 '}';
     }
 }

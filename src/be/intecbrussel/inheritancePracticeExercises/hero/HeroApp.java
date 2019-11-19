@@ -2,28 +2,56 @@ package be.intecbrussel.inheritancePracticeExercises.hero;
 
 public class HeroApp {
     public static void main(String[] args) {
-        Hero[] theJusticeLeague =new Hero[4];
-        theJusticeLeague[0] = new ArmedHero("Bruce",45);
-        theJusticeLeague[1] = new Tank("Clark Kent", 5000);
-        theJusticeLeague[2] = new ShapeShifter("Barry Allen",32);
-        theJusticeLeague[3]= new Energizer("Gibson Rickenbacker",40);
+        Team team1 = new Team();
+        Team team2 = new Team();
 
-        Hero[]theAvengers = new Hero[4];
-        theAvengers[0] = new ArmedHero("Steve Rogers",98);
-        theAvengers[1] = new Tank("Bruce Banner",50);
-        theAvengers[2] = new ShapeShifter("Tony Stark",55);
-        theAvengers[3]= new Energizer("Thor",3000);
-//        public void print(Hero[]){
-//            return ;
-//        }
-//
-//
-//
-//        public void printHeader(){
-//
-//        }
-//        public boolean FancyLines(){
-//
-//        }
+        team1.setTeamName("TheJusticeLeague");
+        team2.setTeamName("TheAvengers");
+
+
+        Hero[] heroes = new Hero[4];
+        heroes[0] = new ArmedHero("Bruce", 45);
+        heroes[1] = new Tank("Clark Kent", 5000);
+        heroes[2] = new ShapeShifter("Barry Allen", 32);
+
+        heroes[3] = new Energizer("Gibson Rickenbacker", 40);
+
+        heroes[0].setTeam(team1);
+        heroes[1].setTeam(team1);
+        heroes[2].setTeam(team1);
+        heroes[3].setTeam(team1);
+
+
+        Hero[] moreHeroes = new Hero[4];
+        moreHeroes[0] = new ArmedHero("Steve Rogers", 98);
+        moreHeroes[1] = new Tank("Bruce Banner", 50);
+        moreHeroes[2] = new ShapeShifter("Tony Stark", 55);
+        moreHeroes[3] = new Energizer("Thor", 3000);
+
+        moreHeroes[0].setTeam(team2);
+        moreHeroes[1].setTeam(team2);
+        moreHeroes[2].setTeam(team2);
+        moreHeroes[3].setTeam(team2);
+
+        System.out.println(team1.getTeamName());
+        System.out.print("Iron Man, ");
+        heroes[2].useSuperPower();
+        System.out.print("The Hulk, ");
+        heroes[1].useSuperPower();
+        System.out.print("Thor, ");
+        heroes[3].useSuperPower();
+        System.out.print("Captain America, ");
+        heroes[0].useSuperPower();
+
+        System.out.println(heroes[0].getAge()+heroes[1].getAge()+heroes[0].getAge()+heroes[0].getAge());
+
+        Hero heroA = new ShapeShifter();
+        Hero heroB = new Tank();
+        Hero heroC = new ShapeShifter();
+        Hero heroD = new ShapeShifter();
+
+
+        AllTheHeroes avangers = new AllTheHeroes();
+         avangers.addSuperHero(heroes[0]);
     }
 }

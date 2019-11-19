@@ -1,19 +1,23 @@
 package be.intecbrussel.inheritancePracticeExercises.hero;
 
-public class Tank extends Hero{
-    Tank(){
+public class Tank extends Hero {
+    Tank() {
 
     }
 
-    Tank(String name){
+    private Hero hero;
+
+    Tank(String name) {
         this.alias = name;
     }
-    Tank(String name, int age){
+
+    Tank(String name, int age) {
         this.alias = name;
-        this.age = age;
+        super.setAge(age);
     }
 
-    public void useSuperPower(){
+    public void useSuperPower() {
+        System.out.println("Stompy Boy");
 
     }
 
@@ -21,7 +25,15 @@ public class Tank extends Hero{
     public String toString() {
         return "Tank{" +
                 "alias='" + alias + '\'' +
-                ", age=" + age +
+                ", age=" + super.getAge() +
                 '}';
+    }
+
+    public Hero getHero() {
+        return hero;
+    }
+
+    public void setHero(Hero hero) {
+        this.hero = hero;
     }
 }

@@ -11,10 +11,11 @@ public class Energizer extends Hero{
 
     Energizer(String name, int age){
         this.alias= name;
-        this.age = age;
+        super.setAge(age);
     }
 
     public void useSuperPower(){
+        System.out.println("Thunder Punch");
 
     }
 
@@ -22,7 +23,7 @@ public class Energizer extends Hero{
     public String toString() {
         return "Energizer{" +
                 "alias='" + alias + '\'' +
-                ", age=" + age +
+                ", age=" + super.getAge() +
                 '}';
     }
 }
