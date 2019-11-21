@@ -13,7 +13,6 @@ public class HeroApp {
         heroes[0] = new ArmedHero("Bruce", 45);
         heroes[1] = new Tank("Clark Kent", 5000);
         heroes[2] = new ShapeShifter("Barry Allen", 32);
-
         heroes[3] = new Energizer("Gibson Rickenbacker", 40);
 
         heroes[0].setTeam(team1);
@@ -45,13 +44,21 @@ public class HeroApp {
 
         System.out.println(heroes[0].getAge()+heroes[1].getAge()+heroes[0].getAge()+heroes[0].getAge());
 
-        Hero heroA = new ShapeShifter();
+        AllTheHeroes teamA = new AllTheHeroes();
+
+        Hero heroA = new Tank();
         Hero heroB = new Tank();
         Hero heroC = new ShapeShifter();
         Hero heroD = new ShapeShifter();
+        System.out.println("adding heroA");
+        teamA.addSuperHero(heroA);
+      //  teamA.addSuperHero(heroB);
 
+        AllTheHeroes avengers = new AllTheHeroes();
+         //avengers.addSuperHero(heroes[0]);
+         //avengers.addSuperHero(heroes[1]);
 
-        AllTheHeroes avangers = new AllTheHeroes();
-         avangers.addSuperHero(heroes[0]);
+         //avengers.removeSuperHero(heroes[1]);
+
     }
 }
