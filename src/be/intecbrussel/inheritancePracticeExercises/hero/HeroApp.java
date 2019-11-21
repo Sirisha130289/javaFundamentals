@@ -42,23 +42,30 @@ public class HeroApp {
         System.out.print("Captain America, ");
         heroes[0].useSuperPower();
 
-        System.out.println(heroes[0].getAge()+heroes[1].getAge()+heroes[0].getAge()+heroes[0].getAge());
-
-        AllTheHeroes teamA = new AllTheHeroes();
-
-        Hero heroA = new Tank();
-        Hero heroB = new Tank();
-        Hero heroC = new ShapeShifter();
-        Hero heroD = new ShapeShifter();
-        System.out.println("adding heroA");
-        teamA.addSuperHero(heroA);
-      //  teamA.addSuperHero(heroB);
+        System.out.println(heroes[0].getAge() + heroes[1].getAge() + heroes[0].getAge() + heroes[0].getAge());
+//
+//        AllTheHeroes teamA = new AllTheHeroes();
+//
+//        Hero heroA = new Tank();
+//        Hero heroB = new Tank();
+//        Hero heroC = new ShapeShifter();
+//        Hero heroD = new ShapeShifter();
+//        System.out.println("adding heroA");
+//        teamA.addSuperHero(heroA);
+//      //  teamA.addSuperHero(heroB);
 
         AllTheHeroes avengers = new AllTheHeroes();
-         //avengers.addSuperHero(heroes[0]);
-         //avengers.addSuperHero(heroes[1]);
+        avengers.addSuperHero(heroes[0]);
+        avengers.addSuperHero(heroes[1]);
+        avengers.addSuperHero(heroes[2]);
+        avengers.addSuperHero(heroes[3]);
 
-         //avengers.removeSuperHero(heroes[1]);
+
+             avengers.addSuperHero(heroes[1]);
+
+            avengers.removeSuperHero(heroes[1]);
+
+        System.out.println(avengers);
 
     }
 }

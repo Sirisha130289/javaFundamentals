@@ -1,63 +1,84 @@
 package be.intecbrussel.inheritancePracticeExercises.hero;
 
-import be.intecbrussel.InheritanceChapter10.exercises.ex10_7.Shape;
+import java.util.Arrays;
 
 public class AllTheHeroes {
     Hero[] heroes = new Hero[4];
-    private int count = 0; // we will increment each time a new hero is added.
-
-    AllTheHeroes() {
-
-    }
 
     public void addSuperHero(Hero hero) {
-        if (isHero(hero)) {
-            System.out.println("all ready in");
+        if (isHeroAlreadyPresent(hero)) {
+            System.out.println("Hero already in");
         } else {
+            boolean heroAdded = false;
             for (int i = 0; i < heroes.length; i++) {
                 if ((heroes[i] == null)) {
+                    heroAdded = true;
                     heroes[i] = hero;
-
                     System.out.println(heroes[i]);
-                } else {
-                    System.out.println("No more heroes can be added");
+                    break;
                 }
             }
+
+            if (!heroAdded) {
+                System.out.println("No more spaces for heros to be added!");
+            }
         }
-
-
-
     }
+
+
+
+
+
 
     public void removeSuperHero(Hero hero) {
-
-
+        boolean heroRemoved = false;
         for (int i = 0; i < heroes.length; i++) {
-            if ((heroes[i] == null) && (isHero(hero))) {
-                heroes[i] = hero;
+            if (hero instanceof ArmedHero && heroes[i] instanceof ArmedHero) {
+                heroes[i] = null;
+                heroRemoved = true;
+                System.out.println("Hero : " + hero + " removed");
+            } else if (hero instanceof Tank && heroes[i] instanceof Tank) {
+                heroes[i] = null;
+                heroRemoved = true;
+                System.out.println("Hero : " + hero + " removed");
+            } else if (hero instanceof ShapeShifter && heroes[i] instanceof ShapeShifter) {
+                heroes[i] = null;
+                heroRemoved = true;
+                System.out.println("Hero : " + hero + " removed");
+            } else if (hero instanceof Energizer && heroes[i] instanceof Energizer) {
+                heroes[i] = null;
+                heroRemoved = true;
+                System.out.println("Hero : " + hero + " removed");
             }
+        }
 
+        if (!heroRemoved) {
+            System.out.println("Hero doesnt exist to delete");
         }
     }
 
-    public boolean isHero(Hero hero) {
+
+
+
+    private boolean isHeroAlreadyPresent(Hero hero) {
         for (int i = 0; i < heroes.length; i++) {
-            if (hero instanceof ArmedHero) {
-                ArmedHero armedHero = (ArmedHero) hero;
+            if (hero instanceof ArmedHero && heroes[i] instanceof ArmedHero) {
                 return true;
-            } else if (hero instanceof Tank) {
-                Tank tank = (Tank) hero;
+            } else if (hero instanceof Tank && heroes[i] instanceof Tank) {
                 return true;
-            } else if (hero instanceof ShapeShifter) {
-                ShapeShifter shapeShifter = (ShapeShifter) hero;
+            } else if (hero instanceof ShapeShifter && heroes[i] instanceof ShapeShifter) {
                 return true;
-            } else if (hero instanceof Energizer) {
-                Energizer energizer = (Energizer) hero;
+            } else if (hero instanceof Energizer && heroes[i] instanceof Energizer) {
                 return true;
             }
-
-
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "AllTheHeroes{" +
+                "heroes=" + Arrays.toString(heroes) +
+                '}';
     }
 }

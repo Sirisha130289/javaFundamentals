@@ -21,6 +21,15 @@ public class Hero {
         return age;
     }
 
+    @Override
+    public String toString() {
+        return "Hero{" +
+                "alias='" + alias + '\'' +
+                ", age=" + age +
+                ", team=" + team +
+                '}';
+    }
+
     public void setAge(int age) {
         this.age = age;
     }
