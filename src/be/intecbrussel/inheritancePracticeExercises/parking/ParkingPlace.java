@@ -29,10 +29,28 @@ public class ParkingPlace {
                 System.out.println();
             }
         }
-
-
     }
 
+    public void addCars(Cars Cars) {
+        for (int i = 0; i < cars.length; i++) {
+            if (cars[i] == null) {
+                cars[i] = Cars;
+                break;
+            } else {
+                if (i == cars.length - 1) {
+                    System.out.println("Parking full");
+                }
+            }
+        }
+    }
+
+    public void removeCars(int index) {
+        cars[index] = null;
+    }
+
+    public void removeCars(Cars cars){
+
+    }
 }
 
 

@@ -7,7 +7,7 @@ public class AllTheHeroes {
 
     public void addSuperHero(Hero hero) {
         if (isHeroAlreadyPresent(hero)) {
-            System.out.println("Hero already in");
+            System.out.println("Hero "+ hero+" already in");
         } else {
             boolean heroAdded = false;
             for (int i = 0; i < heroes.length; i++) {
