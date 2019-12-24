@@ -17,15 +17,23 @@ public class MainBikeApp {
         bikes[0].setBackGear(6);
         bikes[0].setWeight(2500);
 
+        bikeRack.addBikeToRack(bikes[0]);
+        bikeRack.addBikeToRack(bikes[1]);
+        bikeRack.addBikeToRack(bikes[2]);
+        bikeRack.addBikeToRack(bikes[3]);
+        bikeRack.addBikeToRack(bikes[4]);
+        bikeRack.addBikeToRack(bikes[5]);
 
+        bikeRack.printBikeRack();
 
-
-        System.out.println("Bike Rack =" + bikeRack.getName() + bikes[0] + bikes[1] + bikes[5] + bikes[3] + bikes[4]);
-
-
-        System.out.println("The distance travelled is : " + ((bikes[0].getFrontGear() * bikes[0].getBackGear()) / bikes[0].getWeight()) * bikes[0].getDistance(3000) + "kms");
-        System.out.println("The distance travelled is : " + ((bikes[2].getFrontGear() * bikes[2].getBackGear()) / bikes[2].getWeight()) * bikes[2].getDistance(3000) + "kms");
-        System.out.println("The distance travelled is : " + ((bikes[4].getFrontGear() * bikes[4].getBackGear()) / bikes[4].getWeight()) * bikes[4].getDistance(3000) + "kms");
-
+        double distance1 = ((bikes[0].getFrontGear() * bikes[0].getBackGear()) / bikes[0].getWeight()) * bikes[0].getDistance(3000);
+        System.out.format("The distance travelled is : %.2f", distance1);
+        System.out.println(" kms");
+        // System.out.println("The distance travelled is : " + ;
+        System.out.format("The distance travelled is : %.2f",  ((bikes[2].getFrontGear() * bikes[2].getBackGear()) / bikes[2].getWeight()) * bikes[2].getDistance(3000) , "kms");
+        System.out.println(" kms");
+        System.out.format("The distance travelled is : %.2f " , ((bikes[4].getFrontGear() * bikes[4].getBackGear()) / bikes[4].getWeight()) * bikes[4].getDistance(3000) , "kms");
+        System.out.println(" kms");
     }
+
 }

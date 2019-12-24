@@ -4,7 +4,6 @@ public class BikeRack {
     private String name;
     private Bike[] bikes = new Bike[5];
 
-
     public String getName() {
         return name;
     }
@@ -23,29 +22,28 @@ public class BikeRack {
 
 
     public void printBikeRack() {
-
+        for (int i = 0; i < bikes.length; i++) {
+            System.out.println(bikes[i]);
+        }
     }
 
 
     public void addBikeToRack(Bike bike) {
         for (int i = 0; i < bikes.length; i++) {
+            if (bikes[4] != null) {
+                bikes[2] = bike;
+
+            }
             if (bikes[i] == null) {
                 bikes[i] = bike;
-
-                if (bikes.length ==5) {
-
-                    bikes[2] = bikes[5];
-
-
-                }
-                System.out.println(bikes[i]);
                 break;
             }
+
+
         }
 
     }
 }
-
 
 
 
