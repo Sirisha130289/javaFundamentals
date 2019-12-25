@@ -1,4 +1,4 @@
-package be.intecbrussel.enums;
+package be.intecbrussel.enumsChapter11;
 
 public enum Weekdays {
 

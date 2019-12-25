@@ -1,4 +1,4 @@
-package be.intecbrussel.enums;
+package be.intecbrussel.enumsChapter11;
 
 public enum Months {
     JANUARY(31, "Winter"), FEBRUARY(28, "Winter"), MARCH(31, "Winter"), APRIL(30, "Summer"), MAY(31, "Summer"), JUNE(30, "Summer"),

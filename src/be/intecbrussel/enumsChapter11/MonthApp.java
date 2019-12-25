@@ -1,7 +1,4 @@
-package be.intecbrussel.enums;
-
-import java.rmi.MarshalledObject;
-import java.time.Month;
+package be.intecbrussel.enumsChapter11;
 
 public class MonthApp {
 

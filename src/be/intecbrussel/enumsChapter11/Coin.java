@@ -1,4 +1,4 @@
-package be.intecbrussel.enums;
+package be.intecbrussel.enumsChapter11;
 
 public enum Coin {
     ONECENT, TWOCENT, FIVECENT, TENCENT, TWENTYCENT, FIFTYCENT, ONEEURO, TWOEURO; //enum objects created.

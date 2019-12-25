@@ -1,4 +1,4 @@
-package be.intecbrussel.enums;
+package be.intecbrussel.enumsChapter11;
 
 public enum Day {
     SUNDAY(false),MONDAY(true),TUESDAY(true),WEDNESDAY(true),THURSDAY(true),FRIDAY(true),SATURDAY(false);
