@@ -1,4 +1,4 @@
-package be.intecbrussel.simpleclassesChapter12;
+package be.intecbrussel.simpleclassesChapter12.demo;
 
 
 public class AutoBoxing {
