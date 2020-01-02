@@ -26,7 +26,7 @@ public class DrawingApp {
         drawing.add(rectangle1);
         drawing.add(square);
         drawing.add(circle);
-        
+
         System.out.println(drawing.getSize());
         TextDrawingContext tdc = new TextDrawingContext();
         drawing.draw(tdc);
