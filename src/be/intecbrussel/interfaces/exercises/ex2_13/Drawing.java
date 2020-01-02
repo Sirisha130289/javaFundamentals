@@ -64,15 +64,19 @@ public class Drawing implements Drawable {
 
     @Override
     public void draw(DrawingContext dc) {
-        for (Drawable d: drawables) {
-            d.draw(dc);
+        for (int i = 0; i < drawables.length; i++) {
+            if (drawables[i] != null) {
+                drawables[i].draw(dc);
+            }
         }
     }
 
     @Override
     public void scale(int s) {
-        for (Drawable d: drawables) {
-            d.scale(s);
+       for(int i=0; i<drawables.length;i++){
+           if (drawables[i]!=null){
+               drawables[i].scale(s);
+           }
         }
     }
 
