@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Random;
 
-public class QuizService<l> {
+public class QuizService {
 
     private QuizQuestion[] questions;
     private int[] userAnswers;
@@ -31,15 +31,15 @@ public class QuizService<l> {
     public int getInput() {
 
         while (true) {
-            try {
-                System.out.println("Please give in your answer: ");
-                return keyboard.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.println("Please enter an integer!");
-                keyboard.next();
-            }
+        try {
+            System.out.println("Please give in your answer: ");
+            return keyboard.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Please enter an integer!");
+            keyboard.next();
         }
     }
+}
 
     public void administrateQuiz() {
         userAnswers = new int[10];
