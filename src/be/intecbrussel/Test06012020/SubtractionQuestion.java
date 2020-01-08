@@ -1,33 +1,40 @@
 package be.intecbrussel.Test06012020;
 
-
 import java.util.Random;
 
 public class SubtractionQuestion implements QuizQuestion {
 
-    Random random = new Random();
+    private Random rand = new Random();
 
     private int firstNumber;
     private int secondNumber;
 
     SubtractionQuestion() {
-        this.firstNumber = random.nextInt(10);
-        this.secondNumber = random.nextInt(10);
-        if(secondNumber>firstNumber){
-            int temp = firstNumber;
-            firstNumber = secondNumber;
-            secondNumber=temp;
+        firstNumber = rand.nextInt(10);
+        secondNumber = rand.nextInt(10);
+        if (firstNumber < secondNumber) {
+            int temp = secondNumber;
+            secondNumber = firstNumber;
+            firstNumber = temp;
         }
     }
 
     @Override
+    public String toString() {
+        return "SubtractionQuestion{" +
+                "rand=" + rand +
+                ", firstNumber=" + firstNumber +
+                ", secondNumber=" + secondNumber +
+                '}';
+    }
+
+    @Override
     public String getQuestion() {
-        return "What is the difference of two numbers? " + firstNumber + " - " + secondNumber;
+        return "What is the difference between the numbers ? " + firstNumber + " - " + secondNumber;
     }
 
     @Override
     public int getCorrectAnswer() {
-        return firstNumber-secondNumber;
+        return firstNumber - secondNumber;
     }
 }
-

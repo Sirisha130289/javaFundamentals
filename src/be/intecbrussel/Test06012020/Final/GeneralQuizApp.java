@@ -1,4 +1,4 @@
-package be.intecbrussel.Test06012020;
+package be.intecbrussel.Test06012020.Final;
 
 public class GeneralQuizApp {
     public static void main(String[] args) {

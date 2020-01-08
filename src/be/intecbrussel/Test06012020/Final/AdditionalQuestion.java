@@ -1,4 +1,4 @@
-package be.intecbrussel.Test06012020;
+package be.intecbrussel.Test06012020.Final;
 
 import java.util.Random;
 
