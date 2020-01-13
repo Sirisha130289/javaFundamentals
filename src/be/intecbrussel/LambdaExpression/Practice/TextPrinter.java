@@ -1,43 +1,39 @@
 package be.intecbrussel.LambdaExpression.Practice;
 
 public class TextPrinter {
-
     private String sentence;
-
+    private int value;
     public TextPrinter(String sentence) {
         this.sentence = sentence;
     }
 
-    public String getSentence() {
-        return sentence;
+    public TextPrinter(int value) {
+        this.value = value;
     }
 
-    public void setSentence(String sentence) {
-        this.sentence = sentence;
-    }
-
-    public void printFilteredWords(WordFilter filter) {
-        for (String w : sentence.split(" ")) {
-            if (filter.isValid(w)) {
-                System.out.println(w);
+    public void printFilteredWords(WordInterface wordInterface) {
+        for (String s : sentence.split(" ")) {
+            if (wordInterface.isValid(s)) {
+                System.out.println(s);
             }
         }
-
     }
 
-    public static void main(String[] args) {
-        String input = "Life is beautiful";
-        TextPrinter textPrinter = new TextPrinter(input);
-//        textPrinter.printFilteredWords(new WordFilter() {
-//            @Override
-//            public boolean isValid(String s) {
-//                if (s.contains("e")) {
-//                    return true;
-//                }
-//                return false;
-//            }
-//        });
-//
-        textPrinter.printFilteredWords((String s) -> s.contains("e"));
+    public void printProcessedWords(WordProcessor wordProcessor) {
+        for (String s : sentence.split(" ")) {
+            System.out.println(wordProcessor.process(s));
+        }
+    }
+
+    public void printNumbers(NumberProcessor numberProcessor) {
+        System.out.println(numberProcessor.getMultipliedNumber(value)) ;
+    }
+
+    public void printNumberValues(NumberParser numberParser){
+        for (String w : sentence.split(" ")) {
+            System.out.format("%,.2f%n",numberParser.parse(w));
+        }
     }
 }
+
+
