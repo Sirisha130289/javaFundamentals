@@ -1,4 +1,4 @@
-package be.intecbrussel.lambdas;
+package be.intecbrussel.LambdaExpression.Practice;
 
 public class TextPrinter {
 
