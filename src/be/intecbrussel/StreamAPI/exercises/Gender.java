@@ -1,8 +1,7 @@
 package be.intecbrussel.StreamAPI.exercises;
 
-public class Gender {
+public enum Gender {
+    FEMALE, MALE;
 
-    private String female;
-    private String male;
 
 }

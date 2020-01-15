@@ -10,10 +10,10 @@ public class Person {
     private float weight;
     private float height;
 
-    public Person(String firstName, String lastName,  int age, float weight, float height) {
+    public Person(String firstName, String lastName, Gender gender, int age, float weight, float height) {
         this.firstName = firstName;
         this.lastName = lastName;
-
+        this.gender = gender;
         this.age = age;
         this.weight = weight;
         this.height = height;
@@ -69,19 +69,22 @@ public class Person {
 
     @Override
     public String toString() {
-        return
-                firstName + " " +
-                        lastName + '\'' +
-                        ", age=" + age +
-                        ", weight=" + weight +
-                        ", height=" + height;
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", gender=" + gender +
+                ", age=" + age +
+                ", weight=" + weight +
+                ", height=" + height +
+                '}';
     }
 
     public static void main(String[] args) {
+
         Person[] people = new Person[3];
-        people[0] = new Person("Sirisha", "Ayyagari",  30, 50, 1.53f);
-        people[1] = new Person("Kalyan", "Chavali", 30, 82, 1.80f);
-        people[2] = new Person("Satwika", "Chavali",  4, 17, 1.06f);
+        people[0] = new Person("Sirisha", "Ayyagari",Gender.FEMALE , 30, 50, 1.53f);
+        people[1] = new Person("Kalyan", "Chavali", Gender.MALE,30, 82, 1.80f);
+        people[2] = new Person("Satwika", "Chavali",Gender.FEMALE,  4, 17, 1.06f);
 
         Stream.of(people).forEach(System.out::println);
     }
