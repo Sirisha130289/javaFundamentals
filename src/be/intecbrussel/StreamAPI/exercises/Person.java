@@ -87,6 +87,8 @@ public class Person {
         people[2] = new Person("Satwika", "Chavali",Gender.FEMALE,  4, 17, 1.06f);
 
         Stream.of(people).forEach(System.out::println);
+
+
     }
 
 }
