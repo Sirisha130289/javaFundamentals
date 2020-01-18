@@ -46,17 +46,17 @@ public class PriceList {
         double price = 0.0;
         switch (magnumType) {
             case MILKCHOCOLATE:
-                price = 1.6 * getMagnumStandardPrice();
+                price = MagnumType.MILKCHOCOLATE.getPriceFactor()* getMagnumStandardPrice();
                 break;
             case WHITECHOCOLATE:
             case ROMANTICSTRAWBERRIES:
-                price = 1.8 * getMagnumStandardPrice();
+                price = MagnumType.ROMANTICSTRAWBERRIES.getPriceFactor()*  getMagnumStandardPrice();
                 break;
             case BLACKCHOCOLATE:
-                price = 3.6 * getMagnumStandardPrice();
+                price = MagnumType.BLACKCHOCOLATE.getPriceFactor()* getMagnumStandardPrice();
                 break;
             case ALPINENUTS:
-                price = 1.5 * getMagnumStandardPrice();
+                price = MagnumType.ALPINENUTS.getPriceFactor()* getMagnumStandardPrice();
                 break;
             default:
                 break;

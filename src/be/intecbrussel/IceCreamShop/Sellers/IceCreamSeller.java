@@ -1,14 +1,12 @@
 package be.intecbrussel.IceCreamShop.Sellers;
 
-import be.intecbrussel.IceCreamShop.Eatables.Flavour;
-import be.intecbrussel.IceCreamShop.Eatables.IceRocket;
-import be.intecbrussel.IceCreamShop.Eatables.MagnumType;
+import be.intecbrussel.IceCreamShop.Eatables.*;
 
 public interface IceCreamSeller {
 
-    public void orderCone(Flavour[] flavours);
+    public Cone orderCone(Flavour[] flavours);
 
-    public void orderIceRocket(IceRocket iceRocket);
+    public IceRocket orderIceRocket();
 
-    public void orderMagnum(MagnumType magnum);
+    public Magnum orderMagnum(MagnumType magnum);
 }

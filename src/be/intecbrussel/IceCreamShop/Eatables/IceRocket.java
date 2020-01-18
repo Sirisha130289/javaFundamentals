@@ -2,11 +2,12 @@ package be.intecbrussel.IceCreamShop.Eatables;
 
 public class IceRocket implements Eatable {
 
-    IceRocket(){
+    public IceRocket(){
 
     }
     @Override
-    public void eat() {
+    public void eat()
+    {
         System.out.println("I am eating Icerocket");
     }
 }

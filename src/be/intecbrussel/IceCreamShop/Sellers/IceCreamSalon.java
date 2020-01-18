@@ -1,8 +1,6 @@
 package be.intecbrussel.IceCreamShop.Sellers;
 
-import be.intecbrussel.IceCreamShop.Eatables.Flavour;
-import be.intecbrussel.IceCreamShop.Eatables.IceRocket;
-import be.intecbrussel.IceCreamShop.Eatables.MagnumType;
+import be.intecbrussel.IceCreamShop.Eatables.*;
 
 
 public class IceCreamSalon implements IceCreamSeller {
@@ -20,18 +18,33 @@ public class IceCreamSalon implements IceCreamSeller {
     }
 
     @Override
-    public void orderCone(Flavour[] flavours) {
+    public Cone orderCone(Flavour[] flavours) {
+
+        Cone cone = new Cone(flavours);
+        int size = flavours.length;
+        double pricePerFlavour = priceList.getBallPrice();
+        double amount = pricePerFlavour * size;
+        profit = profit + amount;
+        return cone;
+    }
+
+    @Override
+    public IceRocket orderIceRocket() {
+        IceRocket iceRocket1 = new IceRocket();
+        double amount = priceList.getRocketprice();
+
+        profit = profit + amount;
+        return iceRocket1;
 
     }
 
     @Override
-    public void orderIceRocket(IceRocket iceRocket) {
+    public Magnum orderMagnum(MagnumType magnum) {
+        Magnum magnum1 = new Magnum(magnum);
+        double amount = priceList.getMagnumPrice(magnum);
 
-    }
-
-    @Override
-    public void orderMagnum(MagnumType magnum) {
-
+        profit = profit + amount;
+        return magnum1;
     }
 
     @Override

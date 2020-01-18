@@ -14,6 +14,6 @@ public class Cone implements Eatable {
 
     @Override
     public void eat() {
-        System.out.println("I am eating Cone icecream");
+        System.out.println("I am eating Cone icecream with ");
     }
 }
