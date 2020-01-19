@@ -5,19 +5,12 @@ import java.util.Random;
 public class CardMain {
     public static void main(String[] args) {
 
-
-        Card card1 = new Card(getSuitType(), getValue());
-        Card card2 = new Card(getSuitType(), getValue());
-        Card card3 = new Card(getSuitType(), getValue());
-        Card card4 = new Card(getSuitType(), getValue());
-        Card card5 = new Card(getSuitType(), getValue());
-
         Deck deck = new Deck();
-        deck.makeDeck(card1);
-        deck.makeDeck(card2);
-        deck.makeDeck(card3);
-        deck.makeDeck(card4);
-        deck.makeDeck(card5);
+
+        for(int i =0; i<52; i++){
+            deck.makeDeck(new Card(getSuitType(), getValue()));
+        }
+
         deck.getDeck();
     }
 
@@ -90,8 +83,6 @@ public class CardMain {
                 break;
             default:
                 break;
-
-
         }
         return value;
     }

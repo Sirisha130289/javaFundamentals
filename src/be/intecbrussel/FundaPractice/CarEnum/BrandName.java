@@ -7,7 +7,7 @@ public enum BrandName {
 
 
     public double getWeight() {
-        return 0;
+        return weight;
     }
 
     BrandName(double weight) {

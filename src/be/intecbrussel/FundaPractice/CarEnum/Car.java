@@ -74,6 +74,7 @@ public class Car {
                 ", fuel=" + fuel +
                 ", fuelUsage=" + fuelUsage +
                 ", maxFuel=" + maxFuel +
+                ", weight=" + brand.getWeight() +
                 '}';
     }
 }

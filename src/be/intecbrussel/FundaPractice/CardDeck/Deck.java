@@ -2,7 +2,7 @@ package be.intecbrussel.FundaPractice.CardDeck;
 
 public class Deck {
 
-    private Card[] cards = new Card[5];
+    private Card[] cards = new Card[52];
 
     public Card[] getCards() {
         return cards;
@@ -28,6 +28,4 @@ public class Deck {
             System.out.println(cards[i]);
         }
     }
-
-
 }
