@@ -1,15 +1,15 @@
-package be.intecbrussel.collections;
+package be.intecbrussel.collections.exercises.exercise1;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Exercise1 {
+public class List1 {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        List<Integer> inputList = new LinkedList<>();
+        java.util.List<Integer> inputList = new LinkedList<>();
         for (int i = 0; i < 5; i++) {
             System.out.println("Please enter number");
             int num = scan.nextInt();
@@ -29,7 +29,7 @@ public class Exercise1 {
         System.out.println("avg : " + sum * 1d / inputList.size() * 1d);
 
         String sentence = null;
-        List<String> sentenceList = new ArrayList<>();
+        java.util.List<String> sentenceList = new ArrayList<>();
         do {
             System.out.println("Please enter a sentence ending with .");
             sentence = scan.next();
@@ -42,7 +42,7 @@ public class Exercise1 {
         } while (true);
 
         sentenceList.forEach(System.out::println);
-        List<String> reverseList = new ArrayList<>();
+        java.util.List<String> reverseList = new ArrayList<>();
         for (int i = sentenceList.size() -1; i >= 0; i--) {
             reverseList.add(sentenceList.get(i));
         }

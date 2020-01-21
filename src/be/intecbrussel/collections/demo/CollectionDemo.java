@@ -1,4 +1,4 @@
-package be.intecbrussel.collections;
+package be.intecbrussel.collections.demo;
 
 import java.util.ArrayList;
 import java.util.Collection;
