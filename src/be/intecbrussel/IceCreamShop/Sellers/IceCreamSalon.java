@@ -6,44 +6,50 @@ import be.intecbrussel.IceCreamShop.Eatables.*;
 public class IceCreamSalon implements IceCreamSeller {
 
     private PriceList priceList;
+    private double totalProfit;
 
-    private double profit;
+    public PriceList getPriceList() {
+        return priceList;
+    }
+
+    public void setPriceList(PriceList priceList) {
+        this.priceList = priceList;
+    }
+
+    public double getTotalProfit() {
+        return totalProfit;
+    }
+
+    public void setTotalProfit(double totalProfit) {
+        this.totalProfit = totalProfit;
+    }
 
     public IceCreamSalon(PriceList priceList) {
         this.priceList = priceList;
     }
 
-    public double getProfit() {
-        return profit;
-    }
-
     @Override
     public Cone orderCone(Flavour[] flavours) {
-
         Cone cone = new Cone(flavours);
-        int size = flavours.length;
-        double pricePerFlavour = priceList.getBallPrice();
-        double amount = pricePerFlavour * size;
-        profit = profit + amount;
+        double coneProfit = flavours.length * priceList.getBallPrice();
+        totalProfit = totalProfit+coneProfit;
         return cone;
     }
 
     @Override
     public IceRocket orderIceRocket() {
-        IceRocket iceRocket1 = new IceRocket();
-        double amount = priceList.getRocketprice();
-
-        profit = profit + amount;
-        return iceRocket1;
-
+        IceRocket iceRocket = new IceRocket();
+        double rocketProfit = priceList.getRocketprice();
+        totalProfit = totalProfit+rocketProfit;
+        return iceRocket;
     }
 
     @Override
-    public Magnum orderMagnum(MagnumType magnum) {
-        Magnum magnum1 = new Magnum(magnum);
-        double amount = priceList.getMagnumPrice(magnum);
+    public Magnum orderMagnum(MagnumType magnumType) {
 
-        profit = profit + amount;
+        Magnum magnum1 = new Magnum(magnumType);
+        double magnumProfit = priceList.getMagnumPrice(magnumType);
+        totalProfit = totalProfit+magnumProfit;
         return magnum1;
     }
 
@@ -51,7 +57,10 @@ public class IceCreamSalon implements IceCreamSeller {
     public String toString() {
         return "IceCreamSalon{" +
                 "priceList=" + priceList +
-                ", profit=" + profit +
+                ", totalProfit=" + totalProfit +
                 '}';
     }
+
+
 }
+
