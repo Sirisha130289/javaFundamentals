@@ -27,22 +27,22 @@ public class IceCreamApp {
         Stock stock = new Stock(4, 2, 6, 3);
         System.out.println("Stock before order" + stock);
 
-        IceCreamCar iceCreamCar = new IceCreamCar(priceList, stock);
-        Cone cone1 = iceCreamCar.orderCone(flavours);
-        IceRocket iceRocket1 = iceCreamCar.orderIceRocket();
-        Magnum magnum1 = iceCreamCar.orderMagnum(MagnumType.ALPINENUTS);
-        Cone cone2 = iceCreamCar.orderCone(flavours);
-        IceRocket iceRocket2 = iceCreamCar.orderIceRocket();
-        Magnum magnum2 = iceCreamCar.orderMagnum(MagnumType.ALPINENUTS);
-        Cone cone3 = iceCreamCar.orderCone(flavours);
-        IceRocket iceRocket3 = iceCreamCar.orderIceRocket();
-        Magnum magnum3 = iceCreamCar.orderMagnum(MagnumType.ALPINENUTS);
+//        IceCreamCar iceCreamCar = new IceCreamCar(priceList, stock);
+//        Cone cone1 = iceCreamCar.orderCone(flavours);
+//        IceRocket iceRocket1 = iceCreamCar.orderIceRocket();
+//        Magnum magnum1 = iceCreamCar.orderMagnum(MagnumType.ALPINENUTS);
+//        Cone cone2 = iceCreamCar.orderCone(flavours);
+//        IceRocket iceRocket2 = iceCreamCar.orderIceRocket();
+//        Magnum magnum2 = iceCreamCar.orderMagnum(MagnumType.ALPINENUTS);
+//        Cone cone3 = iceCreamCar.orderCone(flavours);
+//        IceRocket iceRocket3 = iceCreamCar.orderIceRocket();
+//        Magnum magnum3 = iceCreamCar.orderMagnum(MagnumType.ALPINENUTS);
 
 
         System.out.println("Stock after order" + stock);
 
-        double totalProfit1 = iceCreamCar.getProfit();
-        System.out.println(totalProfit1);
+//        double totalProfit1 = iceCreamCar.getProfit();
+//        System.out.println(totalProfit1);
 
 
     }
