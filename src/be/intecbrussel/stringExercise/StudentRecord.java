@@ -82,7 +82,7 @@ public class StudentRecord {
 
         Stream.of(studentsSort).forEach(System.out::println);
         while (input == 2) {
-            final String nameToChange = keyboard.next();
+             String nameToChange = keyboard.next();
             System.out.println("name to change : " + nameToChange);
             Optional<Students> studentOptional = studentsSort.stream()
                     .filter(students1 -> nameToChange
