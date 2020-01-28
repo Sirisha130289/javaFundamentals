@@ -1,6 +1,6 @@
 package be.intecbrussel.collections.exercises.exercise7;
 
-public class PersonDetails {
+public class PersonDetails implements Comparable<PersonDetails>{
 
     private String name;
     private int age;
@@ -44,5 +44,23 @@ public class PersonDetails {
 
     public void setHeight(double height) {
         this.height = height;
+    }
+
+    @Override
+    public int compareTo(PersonDetails personDetails) {
+        int result =0;
+        result+= this.name.compareToIgnoreCase(personDetails.name);
+        result+= this.getAge()-personDetails.getAge();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "PersonDetails{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                ", height=" + height +
+                '}';
     }
 }
