@@ -1,6 +1,6 @@
 package be.intecbrussel.collections.exercises.shoppingCart;
 
-public class Customer implements Comparable<Customer> {
+public class Customer  {
     private int customerID;
     private String customerName;
 
@@ -33,8 +33,5 @@ public class Customer implements Comparable<Customer> {
                 '}';
     }
 
-    @Override
-    public int compareTo(Customer o) {
-        return this.getCustomerName().compareTo(o.getCustomerName());
-    }
+
 }

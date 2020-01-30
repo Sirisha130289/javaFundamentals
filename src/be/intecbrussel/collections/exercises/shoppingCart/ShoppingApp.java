@@ -13,8 +13,8 @@ public class ShoppingApp {
         Customer customer2 = new Customer(1920, "Satwika");
         Customer customer3 = new Customer(2021, "Pavan");
 
-        Product product1 = new Product("Lentils", 101,6);
-        Product product2 = new Product("Gram", 102,7);
+        Product product1 = new Product("Lentils", 101,3);
+        Product product2 = new Product("Gram", 102,2);
         Product product3 = new Product("Salt", 103,1);
         Product product4 = new Product("Sugar", 104,2);
 
@@ -31,7 +31,8 @@ public class ShoppingApp {
 
         order.addOrderToCart(customer1, products);
         order.countCart(customer1);
-        order.totalCost(customer1);
+        order.totalCost(products);
+        order.deliveryCharges();
 
 
     }

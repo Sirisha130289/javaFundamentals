@@ -1,12 +1,12 @@
 package be.intecbrussel.collections.exercises.shoppingCart;
 
-import java.math.BigDecimal;
 import java.util.*;
 
 public class Order {
 
     List<Product> products = new ArrayList<>();
-    Map<Customer, List<Product>> shoppingCart = new TreeMap<>();
+    Map<Customer, List<Product>> shoppingCart = new HashMap<>();
+    double sum = 0;
 
     public void addOrderToCart(Customer customer, List<Product> product) {
         shoppingCart.put(customer, product);
@@ -18,12 +18,20 @@ public class Order {
         System.out.println("There are total " + shoppingCart.get(customer).size() + " products in your cart.");
     }
 
-    public void totalCost(Customer customer) {
-        Product product = new Product();
-//     int total= new BigDecimal(shoppingCart.keySet()
-//             .stream().mapToInt( products -> product.setCostOfProduct() * products.get(product) )
-//             .sum());
+    public void totalCost(List<Product> products) {
+        sum = products.stream().mapToDouble(Product::getCostOfProduct).sum();
+        System.out.println("The total cost of your order is " + sum + " euros");
+    }
 
+    public void deliveryCharges() {
+        if (sum >= 10) {
+            System.out.println("You are eligible for free shipping");
+        } else {
+            System.out.println("Your shipping costs are 5 euros as the total order cost is less than 10 euros");
+            sum = sum + 5;
+
+        }
+        System.out.println("Your total order cost is: " +sum+" euros");
     }
 
 }

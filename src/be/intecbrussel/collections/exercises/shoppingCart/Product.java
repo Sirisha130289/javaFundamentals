@@ -1,6 +1,6 @@
 package be.intecbrussel.collections.exercises.shoppingCart;
 
-public class Product implements Comparable<Product>{
+public class Product {
     private String productName;
     private int productID;
     private int costOfProduct;
@@ -43,10 +43,5 @@ public class Product implements Comparable<Product>{
         return
                 "ProductName='" + productName + '\'' +
                 ", ProductID=" + productID ;
-    }
-
-    @Override
-    public int compareTo(Product o) {
-        return this.getProductName().compareTo(o.getProductName());
     }
 }
