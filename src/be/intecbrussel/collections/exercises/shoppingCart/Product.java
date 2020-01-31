@@ -3,7 +3,7 @@ package be.intecbrussel.collections.exercises.shoppingCart;
 public class Product {
     private String productName;
     private int productID;
-    private int costOfProduct;
+    private double costOfProduct;
 
     public Product() {
     }
@@ -30,7 +30,7 @@ public class Product {
         this.productID = productID;
     }
 
-    public int getCostOfProduct() {
+    public double getCostOfProduct() {
         return costOfProduct;
     }
 

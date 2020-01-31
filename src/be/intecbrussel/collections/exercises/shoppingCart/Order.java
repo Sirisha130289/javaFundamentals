@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Order {
 
-    List<Product> products = new ArrayList<>();
+
     Map<Customer, List<Product>> shoppingCart = new HashMap<>();
     double sum = 0;
 
