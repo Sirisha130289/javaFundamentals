@@ -41,7 +41,7 @@ public class FilesHelperClassDemo {
             System.out.println("*".repeat(20));
             Files.lines(path).forEach(System.out::println);
 
-            Path path1 = Paths.get(path)
+            //Path path1 = Paths.get(path)
 
         } catch (IOException e) {
             e.printStackTrace();
